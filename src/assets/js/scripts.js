@@ -183,12 +183,12 @@
 	/*===================================*
      08.COUNTDOWN JS
     *===================================*/
-    $('.tk_countdown_time').each(function() {
-        var endTime = $(this).data('time');
-        $(this).countdown(endTime, function(tm) {
-            $(this).html(tm.strftime('<span class="counter_box"><span class="tk_counter days">%D </span><span class="tk_text">Days</span></span><span class="counter_box"><span class="tk_counter hours">%H</span><span class="tk_text">Hours</span></span><span class="counter_box"><span class="tk_counter minutes">%M</span><span class="tk_text">Minutes</span></span><span class="counter_box"><span class="tk_counter seconds">%S</span><span class="tk_text">Seconds</span></span>'));
-        });
-    });
+	 $('.tk_countdown_time').each(function() {
+		var endTime = $(this).data('time');
+		$(this).countdown(endTime, function(tm) {
+			$(this).html(tm.strftime('<span class="counter_box"><span class="tk_counter days">%D </span><span class="tk_text">Days</span></span><span class="counter_box"><span class="tk_counter hours">%H</span><span class="tk_text">Hours</span></span><span class="counter_box"><span class="tk_counter minutes">%M</span><span class="tk_text">Minutes</span></span><span class="counter_box"><span class="tk_counter seconds">%S</span><span class="tk_text">Seconds</span></span>'));
+		});
+	});
 
 
 	/*===================================*
@@ -213,10 +213,18 @@
 	/*===================================*
 	12. POPUP JS
 	*===================================*/
-	$('.content-popup').magnificPopup({
+	// $('.content-popup').magnificPopup({
+	// 	type: 'inline',
+	// 	preloader: true,
+	// 	mainClass: 'mfp-zoom'
+	// });
+	$('.trx-success-popup').magnificPopup({
 		type: 'inline',
 		preloader: true,
-		mainClass: 'mfp-zoom'
+		mainClass: 'mfp-zoom',
+		items:{
+			src:'#trxSuccess'
+		}
 	});
 	
 	/*===================================*

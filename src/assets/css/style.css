@@ -4275,8 +4275,8 @@ header a:hover,
 }
 .faq_content2 .card-header a::after {
 	color: #ffffff;
-	content: "\f126";
-	font-family: "Ionicons";
+	content: "\f35b";
+	font-family: "Font Awesome 5 Free";
 	font-size: 18px;
 	font-weight: normal;
 	position: absolute;
@@ -4284,7 +4284,7 @@ header a:hover,
 	top: 14px;
 }
 .faq_content2 .card-header a.collapsed:after {
-    content: "\f123";
+    content: "\f358";
 	color:#fff;
 }
 .faq_content2 .card-header a {
@@ -5282,8 +5282,8 @@ button.btn-white:hover {
 	list-style: none;
 }
 .footer_link.list_arrow li a::before {
-	content: "\f125";
-	font-family: ionicons;
+	content: "\f35a";
+	font-family: 'Font Awesome 5 Free';
 	font-size: 14px;
 	margin-right: 10px;
 }

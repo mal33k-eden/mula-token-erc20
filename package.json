@@ -13,8 +13,11 @@
   "author": "Emmanuel Kwami",
   "license": "ISC",
   "dependencies": {
+    "@chainlink/contracts": "^0.1.7",
     "@openzeppelin/contracts": "^4.1.0",
-    "@openzeppelin/test-helpers": "^0.5.11"
+    "@openzeppelin/test-helpers": "^0.5.11",
+    "@truffle/hdwallet-provider": "^1.2.3",
+    "luxon": "^1.27.0"
   },
   "devDependencies": {
     "lite-server": "^2.6.1"

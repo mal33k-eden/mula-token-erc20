@@ -5,6 +5,7 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract MulaToken is ERC20, Ownable {
     
+    uint256 __totalSupply = 100 * 10**6 * (10 ** uint256(decimals()));
     /** If false we are are in transfer lock up period.*/
     bool public released = false;
 
@@ -19,7 +20,7 @@ contract MulaToken is ERC20, Ownable {
         _;
     }
     constructor() ERC20("Mula Token", "MULA") {
-        _mint(msg.sender, 100000000);
+        _mint(msg.sender, __totalSupply);
     }
     /** Allow only the crowdsale address to relase the tokens into the wild */
     function releaseTokenTransfer() public {

@@ -38,7 +38,55 @@
 </head>
 
 <body class="v_light_dark" data-spy="scroll" data-offset="110">
-
+           <!--trx success modal  -->
+           <!-- <div id="trxSuccess" class="team_pop mfp-hide trx-success-popup">
+            <div class="row m-0">
+                <div class="col-md-8">
+                    <div class="pt-3 pb-3">
+                        <div class="title_dark title_border"> 
+                            <h4>Transaction Details</h4>
+                            <p>You have successfully bought some MULA!</p>
+                            <h5 class="mb-3" id="trxTokens">Number of Tokens: </h5>
+                            <h5 class="mb-3" id="trxAddress">Your Address: #</h5>
+                            <h5 class="mb-3" id="trxNetwork">Transaction Network: #</h5>
+                            <h5 class="mb-3" id="transactionHash">Transaction Hash: #</h5>
+                            <a href="#" class="btn btn-default mt-3 verify-trxhash">verify Trx HASH <i class="ion-ios-arrow-thin-right"></i></a>
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4"> 
+                    <img class="pt-3 pb-3" src="assets/images/trx-success.svg" alt="whitepaper"/> 
+                </div>
+                
+            </div>
+        </div> -->
+        <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="trx-success-popup">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="row m-0">
+                <div class="col-md-8">
+                    <div class="pt-3 pb-3">
+                        <div class="title_dark title_border"> 
+                            <h4>Transaction Details</h4>
+                            <p>You have successfully bought some MULA!</p>
+                            <h5 class="mb-3 text-dark" id="trxTokens">Number of Tokens: </h5>
+                            <h5 class="mb-3 text-dark" id="trxAddress">Your Address: #</h5>
+                            <h5 class="mb-3 text-dark" id="trxNetwork">Transaction Network: #</h5>
+                            <h5 class="mb-3 text-dark" id="transactionHash">Transaction Hash: #</h5>
+                            <a href="#" target="_blank" class="btn btn-default mt-3 verify-trxhash">verify Trx HASH <i class="ion-ios-arrow-thin-right"></i></a>
+        
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4"> 
+                    <img class="pt-3 pb-3" src="assets/images/trx-success.svg" alt="whitepaper"/> 
+                </div>
+                
+            </div>
+            </div>
+          </div>
+        </div>
 <!-- START LOADER -->
 <div id="loader-wrapper">
     <div id="loading-center-absolute">
@@ -90,7 +138,7 @@
                     <h1 class="animation text-white" data-animation="fadeInUp" data-animation-delay="1.1s">We Are <span class="text-theme-1">Building</span> The <span class="text-theme-1">Gateway</span> To  <span class="text-theme-1">Africa</span>'s Next Generation <span class="text-theme-1">Borderless</span> Transaction</h1>
                     <p class="animation text-white" data-animation="fadeInUp" data-animation-delay="1.3s">The first African Based decentralized money transfer system that leverages the use of blockchain technology. </p>
                     <div class="btn_group animation" data-animation="fadeInUp" data-animation-delay="1.4s"> 
-                        <a href="#whitepaper" class="btn btn-default nav-link content-popup"><i class="fa fa-file-word-o"></i>Whitepaper</a> 
+                        <a href="#whitepaper" class="btn btn-default nav-link content-popup"><i class="fab fa-file-word-o"></i>Whitepaper</a> 
                         <a href="#" class="btn btn-border-white"><i class="fa fa-ge"></i>Buy Token</a> 
                     </div>
                     <div id="whitepaper" class="team_pop mfp-hide">
@@ -112,17 +160,17 @@
                             
                         </div>
                     </div>
-                </div>
+                    </div>
             </div>
             <div class="col-lg-5 offset-lg-1 col-md-8 offset-md-2 col-sm-12 order-first">
                 <div class="banner_inner res_md_mb_50 res_xs_mb_30">
                     <div class="tk_countdown transparent_bg tk_border_white rounded-0 text-center animation" data-animation="fadeIn" data-animation-delay="1.1s">
                         <div class="banner_text tk_counter_inner">
-                            <div class="tk_countdown_time p-0 transparent_bg box_shadow_none animation" data-animation="fadeInUp" data-animation-delay="1.2s" data-time="2020/05/08 00:00:00"></div>
+                            <div class="tk_countdown_time p-0 transparent_bg box_shadow_none animation" data-animation="fadeInUp" data-animation-delay="1.2s" data-time=""></div>
                             <div class="progress animation" data-animation="fadeInUp" data-animation-delay="1.3s">
-                            <div class="progress-bar progress-bar-striped gradient" role="progressbar" aria-valuenow="46" aria-valuemin="0" aria-valuemax="100" style="width:46%"> 46% </div>
-                                <span class="progress_label bg-white" style="left: 30%"> <strong> 46,000 MULA </strong></span>
-                                <span class="progress_label bg-white" style="left: 75%"> <strong> 90,000 MULA </strong></span>
+                            <div class="progress-bar progress-bar-striped gradient percentToCap percentToCapw" role="progressbar" aria-valuenow="46" aria-valuemin="0" aria-valuemax="100" style="width:46%"> 46% </div>
+                                <span class="progress_label bg-white percentToCapl" style="left: 30%"> <strong> <span class="tokens-sold">90,000 MULA</span> </strong></span>
+                                <span class="progress_label bg-white" style="left: 75%"> <strong> <span class="soft_cap">90,000 MULA</span> </strong></span>
                                 <span class="progress_min_val">Sale Raised</span>
                                 <span class="progress_max_val">Soft-caps</span>
                             </div>
@@ -140,7 +188,7 @@
         	<div class="col-md-7 text_sm_center">
             	<span class="text-white icon_title animation" data-animation="fadeInUp" data-animation-delay="1.4s">We accept :</span>
                 <ul class="list_none currency_icon">
-                  	<li class="animation" data-animation="fadeInUp" data-animation-delay="1.5s"><i class="fa fa-btc"></i><span>Bitcoin</span></li>
+                  	<li class="animation" data-animation="fadeInUp" data-animation-delay="1.5s"><i class="cc BTC"></i><span>Bitcoin</span></li>
                     <li class="animation" data-animation="fadeInUp" data-animation-delay="1.6s"><i class="cc ETC"></i><span>Ethereum </span></li>
                     <li class="animation" data-animation="fadeInUp" data-animation-delay="1.7s"><i class="cc BNB"></i><span>BNB</span></li>
                 </ul>
@@ -148,10 +196,10 @@
             <div class="col-md-5 res_sm_mt_20 text_sm_center">
             	<span class="text-white icon_title animation" data-animation="fadeInUp" data-animation-delay="1.4s">Join The Community:</span>
             	<ul class="list_none social_icon">
-                    <li class="animation" data-animation="fadeInUp" data-animation-delay="1.5s"><a href="#"><i class=" fa fa-telegram"></i></a></li>
-                    <li class="animation" data-animation="fadeInUp" data-animation-delay="1.6s"><a href="#"><i class=" fa fa-twitter"></i></a></li>
-                    <li class="animation" data-animation="fadeInUp" data-animation-delay="1.7s"><a href="#"><i class=" fa fa-instagram"></i></a></li>
-                    <li class="animation" data-animation="fadeInUp" data-animation-delay="1.9s"><a href="#"><i class=" fa fa-linkedin"></i></a></li>
+                    <li class="animation" data-animation="fadeInUp" data-animation-delay="1.5s"><a href="#"><i class="fab fa-telegram"></i></a></li>
+                    <li class="animation" data-animation="fadeInUp" data-animation-delay="1.6s"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li class="animation" data-animation="fadeInUp" data-animation-delay="1.7s"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li class="animation" data-animation="fadeInUp" data-animation-delay="1.9s"><a href="#"><i class="fab fa-linkedin"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -171,15 +219,15 @@
         	<div class="col-lg-12">
             	<div class="token_rtinfo bg-white border_right">
                 	<div class="row text-center">
-                    	<div class="col-lg-2 col-md-4 col-6">
+                    	<div class="col-lg-3 col-md-4 col-6">
                         	<div class="token_rt_value animation" data-animation="fadeInUp" data-animation-delay="0.2s">
-                            	<h3>$150k</h3>
+                            	<h3 class="soft_cap">$150k</h3>
                                 <p>Soft Cap</p>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-4 col-6">
+                        <div class="col-lg-3 col-md-4 col-6">
                         	<div class="token_rt_value animation" data-animation="fadeInUp" data-animation-delay="0.4s">
-                            	<h3>$500k</h3>
+                            	<h3 class="hard_cap">$500k</h3>
                                 <p>Hard Cap</p>
                             </div>
                         </div>
@@ -189,15 +237,15 @@
                                 <p>Investors</p>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-4 col-6">
+                        <!-- <div class="col-lg-2 col-md-4 col-6">
                         	<div class="token_rt_value animation" data-animation="fadeInUp" data-animation-delay="0.8s">
                             	<h3>1<span>/4</span></h3>
                                 <p>Sale Stage</p>
                             </div>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-6">
+                        </div> -->
+                        <div class="col-lg-4 col-md-4 col-6">
                         	<div class="token_rt_value animation" data-animation="fadeInUp" data-animation-delay="1s">
-                            <h3>1000000</h3>
+                            <h3 class="tokens-sold">1000000</h3>
                                 <p>MULA Sold </p>
                             </div>
                         </div>
@@ -322,7 +370,8 @@
 			<div class="col-lg-6 offset-lg-3 col-md-12 col-sm-12">
           <div class="title_dark title_border text-center">
               <h4 class="animation" data-animation="fadeInUp" data-animation-delay="0.2s"><span class="text-theme-1">MULA</span> Token Sale</h4>
-              <p class="animation" data-animation="fadeInUp" data-animation-delay="0.4s">Join the industry leaders to discuss where the markets are heading. We accept token payments. </p>
+              <p class="animation" data-animation="fadeInUp" data-animation-delay="0.4s">We are determined to move cross border money transfer from a financial institution centralized platform to a customer controlled transfer process decentralized platform. Participate by Connecting your wallet to Mula token to support this agenda.
+              </p>
           </div>
 			</div>
         </div>
@@ -333,31 +382,31 @@
                     	<tbody>
                             <tr class="animation" data-animation="fadeInUp" data-animation-delay="0.2s">
                               <td>Starting Time :</td>
-                              <td>OCT 23,2021</td>
+                              <td id="saleStart">OCT 23,2021</td>
                             </tr>
                             <tr class="animation" data-animation="fadeInUp" data-animation-delay="0.3s">
                               <td>Ending Time :</td>
-                              <td>DEC 18,2021</td>
+                              <td id="saleEnd">DEC 18,2021</td>
                             </tr>
                             <tr class="animation" data-animation="fadeInUp" data-animation-delay="0.4s">
-                              <td>Soft cap :</td>
-                              <td>20,000,000 MULA</td>
+                              <td>Pre-Sale Token :</td>
+                              <td>9,000,000 MULA</td>
                             </tr>
                             <tr class="animation" data-animation="fadeInUp" data-animation-delay="0.5s">
-                              <td>Hard cap :</td>
-                              <td>100,000,000 MULA</td>
+                              <td>Private-Sale Token :</td>
+                              <td>11,250,000 MULA</td>
                             </tr>
                             <tr class="animation" data-animation="fadeInUp" data-animation-delay="0.6s">
-                              <td>TOken :</td>
-                              <td>MULA Token</td>
+                              <td>ICO Phase-1 Token:</td>
+                              <td>13,500,000 MULA</td>
                             </tr>
-                            <tr class="animation" data-animation="fadeInUp" data-animation-delay="0.7s">
-                              <td>Exchange Rate :</td>
-                              <td>1 BTC = 1940 MULA</td>
+                            <tr class="animation" data-animation="fadeInUp" data-animation-delay="0.4s">
+                              <td>ICO Phase-2 Token :</td>
+                              <td>11,250,000 MULA</td>
                             </tr>
                             <tr class="animation" data-animation="fadeInUp" data-animation-delay="0.8s">
-                              <td>Token Sale :</td>
-                              <td>85,000 MULA (8%)</td>
+                              <td>Total Tokens :</td>
+                              <td>100,000,000 MULA </td>
                             </tr>
                   		</tbody>
                     </table>
@@ -388,34 +437,36 @@
                                 <!-- slider-->
                                 <div class="form-group text-center">
                                   <h4 id="bt-slider-label" class="label text-theme-1">0</h4>
-                                  <input id="bt-slider" class="" type="range" value="0" min="0" step="0.1" max="50" onchange="App.getSliderValue(this.value)">
+                                  <input id="bt-slider" class="" type="range" value="0" min="0.1" step="0.1" max="50" onchange="App.getSliderValue(this.value)">
                                 </div>
                                 <!-- buy token btn -->
-                                <div class="mt-5 text-center">
-                                    <a href="#" id="buyTokenBtn" class="btn btn-default btn-radius animation text-center" data-animation="fadeInUp" data-animation-delay="0.4s"><i class="fa fas fa-wallet align-middle"></i> Buy Token</a> 
-                                </div>  
+                                <div class="mt-5 text-center buy-it">
+                                    <a href="#" id="buyTokenBtn" class="btn btn-default btn-radius animation text-center" data-animation="fadeInUp" data-animation-delay="0.3s"><i class="fa fas fa-wallet align-middle"></i> Buy Token</a> 
+                                    <h6 class="mt-5 text-theme-2" id="accountAddress" href="#"> #: </h6>
+                                  </div>  
                                 <!-- get account -->
-                                <div class="d-flex align-items-center justify-content-between">
+                                <div class=" align-items-center justify-content-between connect-it">
                                   <!-- <div class="alert alert-warning" id="walletUnlocked" role="alert"></div> -->
                                   <a href="#" class="btn btn-default btn-radius animation connectWallet" data-animation="fadeInUp" data-animation-delay="0.4s"><i class="fa fas fa-wallet align-middle"></i> Connect Wallet</a>
-                                  <h6 class="mt-5 text-theme-2" id="accountAddress" href="#"> #: </a>
-                              </div>                       
+                                </div>                            
                             </div>
-                        </div>
+                      </div>
+                      
+                      
                         <div class="col-lg-5">
                         	<div class="token_detail text-center res_md_mt_30 res_xs_mt_20">
                             	<ul class="list_none">
                                 	<li class="animation" data-animation="fadeInUp" data-animation-delay="0.2s">
-                                    	<h4>1 ETH</h4>
+                                    	<h6 id="balance" class="text-white">1 ETH</h6>
                                     	<span>Account Balance</span>
                                     </li>
                                     <li class="animation" data-animation="fadeInUp" data-animation-delay="0.4s">
-                                    	<h4>1 MULA = $32.21</h4>
+                                    	<h6 id="rate" class="text-white">1 MULA = $32.21</h6>
                                     	<span>Exchange Rate</span>
                                     </li>
                                     <li class="animation" data-animation="fadeInUp" data-animation-delay="0.6s">
-                                    	<h4>ETH, BNB, BUSD</h4>
-                                    	<span>Acceptable Currency</span>
+                                    	<h6 id="currency_rate" class="text-white">1 ETH = </h6>
+                                    	<span>Currency Rate</span>
                                     </li>
                                 </ul>
                             </div>
@@ -431,7 +482,7 @@
           <div class="col-lg-6 offset-lg-3">
             <div class="title_dark title_border text-center">
               <h4 class="animation" data-animation="fadeInUp" data-animation-delay="0.2s"><span class="text-theme-1">MULA</span> Token Distribution</h4>
-              <p class="animation" data-animation="fadeInUp" data-animation-delay="0.4s">It is also possible to have a static supply with a dynamic funding goal, in which the distribution of tokens will be made according to the funds received</p>
+              <p class="animation" data-animation="fadeInUp" data-animation-delay="0.4s">To make this agenda a success, our team of experts have assessed the appropriate distribution of the Mula token to be as follows.</p>
             </div>
           </div>
         </div>
@@ -527,7 +578,7 @@
         	<div class="col-lg-6 col-md-12 col-sm-12">
             	<div class="title_dark title_border">
                   <h4 class="animation" data-animation="fadeInUp" data-animation-delay="0.2s">An Emerging Ecosystem</h4>
-                  <p class="animation" data-animation="fadeInUp" data-animation-delay="0.4s">Cryptocash has great features that  make it the best place. Odit, itaque, deserunt corporis vero ipsum eius odio natus ullam quia eos.</p>
+                  <p class="animation" data-animation="fadeInUp" data-animation-delay="0.4s">This agenda for Africa’s next generation borderless transaction will be a solution to a series of existing money transfer difficulties accross Africa. The agenda will cover the various pain points that the fin industry in the continent suffers. <br>The token will promote: </p>
                 </div>
                 <ul class="list_info list_info_half list_none">
                     <li class="animation" data-animation="fadeInUp" data-animation-delay="0.5s">
@@ -540,7 +591,7 @@
                     </li>
                     <li class="animation" data-animation="fadeInUp" data-animation-delay="0.6s">
                         <div class="list_icon">	
-                            <i class="fa fa-line-chart"></i>
+                            <i class="fas fa-sync"></i>
                         </div>
                         <div class="list_content">
                             <h6>Swapping & Staking</h6>
@@ -572,7 +623,7 @@
                     </li>
                     <li class="animation" data-animation="fadeInUp" data-animation-delay="1s">
                         <div class="list_icon">	
-                            <i class="fa fa-gear"></i>
+                            <i class="fas fa-cog"></i>
                         </div>
                         <div class="list_content">
                             <h6>Easy Asset Management</h6>
@@ -597,7 +648,7 @@
       <div class="col-lg-8 col-md-12 offset-lg-2">
         <div class="title_default_light title_border text-center">
           <h4 class="animation" data-animation="fadeInUp" data-animation-delay="0.2s">Roadmap</h4>
-          <p class="animation" data-animation="fadeInUp" data-animation-delay="0.4s">The use of crypto-currencies has become more widespread, and they are now increasingly accepted as a legitimate currency for transactions.</p>
+          <p class="animation" data-animation="fadeInUp" data-animation-delay="0.4s">The MULA Token project will be delivered in phases. Below is an overview of our road map in the coming space</p>
         </div>
       </div>
     </div>
@@ -708,7 +759,7 @@
         	<div class="col-lg-8 col-md-12 offset-lg-2">
               <div class="title_default_light title_border text-center">
                 <h4 class="animation" data-animation="fadeInUp" data-animation-delay="0.2s">Frequently Asked Questions</h4>
-                <p class="animation" data-animation="fadeInUp" data-animation-delay="0.4s">Frequently asked questions (FAQ) or Questions and Answers (Q&A), are listed questions and answers, all supposed to be commonly asked in some context</p>
+                <p class="animation" data-animation="fadeInUp" data-animation-delay="0.4s">See below answers to some of the frequently asked questions. For more inquiries and additional information visit join our active community on telegram and express yourself</p>
               </div>
             </div>
         </div>
@@ -1108,18 +1159,18 @@
                         <h4 class="animation" data-animation="fadeInUp" data-animation-delay="0.2s">Connect With Us</h4>
                         <p class="animation" data-animation="fadeInUp" data-animation-delay="0.4s">Join Our Growing Community</p>
                         <ul class="list_none social_icon">
-                          <li class="animation" data-animation="fadeInUp" data-animation-delay="0.4s"><a href="#"><i class=" fa fa-telegram"></i></a></li>
+                          <li class="animation" data-animation="fadeInUp" data-animation-delay="0.4s"><a href="#"><i class="fab fa-telegram"></i></a></li>
                        </ul>
                     </div>
                   
                   <div class="contct_follow large_space">
                       <span class="text-uppercase animation" data-animation="fadeInUp" data-animation-delay="0.2s">Follow Us</span>
                       <ul class="list_none social_icon">
-                        <li class="animation" data-animation="fadeInUp" data-animation-delay="0.4s"><a href="#"><i class=" fa fa-facebook"></i></a></li>
-                        <li class="animation" data-animation="fadeInUp" data-animation-delay="0.5s"><a href="#"><i class=" fa fa-twitter"></i></a></li>
-                        <li class="animation" data-animation="fadeInUp" data-animation-delay="0.6s"><a href="#"><i class=" fa fa-google-plus"></i></a></li>
-                        <li class="animation" data-animation="fadeInUp" data-animation-delay="0.7s"><a href="#"><i class=" fa fa-pinterest"></i></a></li>
-                        <li class="animation" data-animation="fadeInUp" data-animation-delay="0.8s"><a href="#"><i class=" fa fa-linkedin"></i></a></li>
+                        <li class="animation" data-animation="fadeInUp" data-animation-delay="0.4s"><a href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li class="animation" data-animation="fadeInUp" data-animation-delay="0.5s"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li class="animation" data-animation="fadeInUp" data-animation-delay="0.6s"><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                        <li class="animation" data-animation="fadeInUp" data-animation-delay="0.7s"><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                        <li class="animation" data-animation="fadeInUp" data-animation-delay="0.8s"><a href="#"><i class="fab fa-linkedin"></i></a></li>
                      </ul>
                  </div>
               	</div>
@@ -1204,6 +1255,7 @@
 <script src="assets/js/spop.min.js"></script> 
 <script src="assets/js/notification.js"></script> 
 <!-- scripts js --> 
+<script src="assets/js/luxon.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
 <script src="https://unpkg.com/@metamask/detect-provider/dist/detect-provider.min.js"></script>
 <script src="assets/js/scripts.js"></script>
